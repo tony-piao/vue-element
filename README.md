@@ -1,0 +1,1 @@
+> vue练手项目，打算用到到的技术栈有elementui，vuex。
