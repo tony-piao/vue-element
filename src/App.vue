@@ -1,9 +1,11 @@
 <template>
   <div id="app">
     
-    <el-container style="border: 1px solid #eee">
-      <el-aside width="200px" style="background-color: #fff">
-        <el-menu :default-openeds="['1', '3']" :router="true">
+    <el-container
+      style="border: 1px solid #eee">
+      <el-aside width="200px"  class="bike-menu">
+        <el-menu :default-openeds="['1', '3']" 
+          :router="true">
           <el-submenu index="1">
             <template slot="title">
               <i class="el-icon-message"></i>导航栏
@@ -18,7 +20,7 @@
       </el-aside>
 
       <el-container>
-        <el-header style="text-align: right; font-size: 12px">
+        <!-- <el-header style="text-align: right; font-size: 12px">
           <el-dropdown>
             <i class="el-icon-setting" style="margin-right: 15px"></i>
             <el-dropdown-menu slot="dropdown">
@@ -28,7 +30,7 @@
             </el-dropdown-menu>
           </el-dropdown>
           <span>王小虎</span>
-        </el-header>
+        </el-header> -->
 
         <el-main>
           <router-view/>
@@ -66,7 +68,7 @@ export default {
 };
 </script>
 
-<style>
+<style lang="less">
 #app {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -76,5 +78,9 @@ export default {
   height: 100%;
   display: flex;
   flex-grow: 1;
+
+  .bike-menu {
+    background: #607D8B;
+  }
 }
 </style>

@@ -157,8 +157,7 @@
     async created() {
       const item = Object.assign({}, this.editRecord);
       if (item.guid) {
-        const result = await bikeNewsSvc.getNewsInfoByGuid(item.guid);
-        this.$set(this, 'form', result);
+        this.$set(this, 'form', item);
       }
     },
     methods: {

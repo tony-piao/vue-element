@@ -12,7 +12,7 @@ export default {
     ueditorPath: {
       // UEditor 代码的路径
       type: String,
-      default: '/resources/js/ueditor',
+      default: '/src/resources/js/ueditor',
     },
     ueditorConfig: {
       // UEditor 配置项
@@ -51,7 +51,7 @@ export default {
   },
   mounted() {
     if (!window.UEDITOR_HOME_URL) {
-      window.UEDITOR_HOME_URL = '/resources/js/ueditor/';
+      window.UEDITOR_HOME_URL = '/src/resources/js/ueditor/';
     }
     if (window.UE !== undefined) {
       // 如果全局对象存在，说明编辑器代码已经初始化完成，直接加载编辑器

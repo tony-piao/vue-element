@@ -25,10 +25,9 @@
           <el-button type="primary" @click="handleAddNew">创建新闻</el-button>
         </div>
         <grid :remote-method="loadList" :page-index="pageIndex" ref="grid" style="flex: 1;" class="nowrap-list">
-            <el-table-column label="操作" min-width="120">
+            <el-table-column label="操作" min-width="180">
                 <template scope="scope">
                     <el-button size="small" 
-                      :disabled="scope.row.isOnShelve"
                       @click="handleEdit(scope.row)">
                         编辑
                     </el-button>
@@ -129,7 +128,6 @@
       },
       loadList(filterParams) {
         const response = bikeNewsSvc.getNewsList(filterParams);
-        console.log('response', response);
         return response;
       },
     },
