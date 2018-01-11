@@ -6,9 +6,9 @@
         <el-menu :default-openeds="['1', '3']" :router="true">
           <el-submenu index="1">
             <template slot="title">
-              <i class="el-icon-message"></i>导航栏</template>
+              <i class="el-icon-message"></i>导航栏
+             </template>
             <el-menu-item-group>
-              <template slot="title">分组</template>
               <el-menu-item index="1-1" :route="{name:'user'}">用户管理</el-menu-item>
               <el-menu-item index="1-2">权限管理</el-menu-item>
             </el-menu-item-group>
