@@ -1,8 +1,10 @@
 <template>
-    <div style="flex: 1; display: flex; flex-direction: column; padding: 0;">
-        <el-form ref="form" :model="form" :inline="true" class="search-form">
+    <div class="news-list">
+        <el-form ref="form" :model="form"
+          :inline="true" class="search-form">
 
-            <el-form-item label="创建时间" prop="dateRange">
+            <el-form-item label="创建时间" class="float-left"
+              prop="dateRange">
               <el-date-picker
                 v-model="form.dateRange"
                 style="width:350px"
@@ -12,7 +14,7 @@
               ></el-date-picker>
             </el-form-item>
 
-            <el-form-item>
+            <el-form-item class="float-left">
                 <el-button type="primary" @click="handleSubmit" :loading="isLoading">
                     {{ isLoading ? '' : '搜索' }}
                 </el-button>
@@ -126,9 +128,23 @@
         this.$refs.grid.reload();
       },
       loadList(filterParams) {
-        return bikeNewsSvc.getNewsList(filterParams);
+        const response = bikeNewsSvc.getNewsList(filterParams);
+        console.log('response', response);
+        return response;
       },
     },
   };
 </script>
+<style lang="less">
+  .news-list {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+
+    .float-left {
+      float: left;
+    }
+  }
+</style>
 
