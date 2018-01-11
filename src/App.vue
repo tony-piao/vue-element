@@ -10,7 +10,7 @@
              </template>
             <el-menu-item-group>
               <el-menu-item index="1-1" :route="{name:'user'}">用户管理</el-menu-item>
-              <el-menu-item index="1-2">权限管理</el-menu-item>
+              <el-menu-item index="1-2" :route="{name: 'bikeNews'}">新闻中心</el-menu-item>
             </el-menu-item-group>
           </el-submenu>
 
@@ -46,7 +46,6 @@ import {
   table, tableColumn, menuItemGroup, menuItem,
   dropdownMenu,
 } from 'element-ui';
-import router from '@/router';
 
 export default {
   components: {
@@ -63,20 +62,6 @@ export default {
     elMenuItemGroup: menuItemGroup,
     elMenuItem: menuItem,
     elDropdownMenu: dropdownMenu,
-  },
-  mounted() {
-    console.warn('route', router);
-  },
-  methods: {
-    // tableData() {
-    //   return {
-    //     data: [
-    //       { date: '2017-11-17', name: 'piao', address: '辽宁抚顺' },
-    //       { date: '2017-11-17', name: 'piao', address: '辽宁抚顺' },
-    //       { date: '2017-11-17', name: 'piao', address: '辽宁抚顺' },
-    //     ],
-    //   };
-    // },
   },
 };
 </script>
