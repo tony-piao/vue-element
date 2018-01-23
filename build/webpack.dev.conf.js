@@ -7,6 +7,7 @@ const baseWebpackConfig = require('./webpack.base.conf')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const FriendlyErrorsPlugin = require('friendly-errors-webpack-plugin')
 const portfinder = require('portfinder')
+const Jarvis = require('webpack-jarvis');
 
 const devWebpackConfig = merge(baseWebpackConfig, {
   module: {
@@ -47,6 +48,9 @@ const devWebpackConfig = merge(baseWebpackConfig, {
       template: 'index.html',
       inject: true
     }),
+    new Jarvis({
+      port: 1337 // optional: set a port
+    })
   ]
 })
 

@@ -5,17 +5,25 @@
       style="border: 1px solid #eee">
       <el-aside width="200px"  class="bike-menu">
         <el-menu :default-openeds="['1', '3']" 
+          default-active="1-2"
           :router="true">
           <el-submenu index="1">
             <template slot="title">
-              <i class="el-icon-message"></i>导航栏
+              <i class="el-icon-message"></i>导航栏1
              </template>
             <el-menu-item-group>
               <el-menu-item index="1-1" :route="{name:'user'}">用户管理</el-menu-item>
               <el-menu-item index="1-2" :route="{name: 'bikeNews'}">新闻中心</el-menu-item>
             </el-menu-item-group>
           </el-submenu>
-
+          <el-submenu index="2">
+            <template slot="title">
+              <i class="el-icon-message"></i>导航栏2
+             </template>
+            <el-menu-item-group>
+              <el-menu-item index="2-1">用户管理</el-menu-item>
+            </el-menu-item-group>
+          </el-submenu>
         </el-menu>
       </el-aside>
 
